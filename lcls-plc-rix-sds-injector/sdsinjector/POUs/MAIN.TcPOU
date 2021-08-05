@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="MAIN" Id="{a8fb1169-86d6-43b0-a230-50579a21045e}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	fbSDS_Motor_X : FB_MotionStage;
+    fbSDS_Motor_Y : FB_MotionStage;
+    fbSDS_Motor_Z : FB_MotionStage;
+    fbSDS_Motor_rY : FB_MotionStage;
+	fbSDS_Motor_Shroud : FB_MotionStage;
+	
+	M1 : DUT_MotionStage := (bPowerSelf:=TRUE, nEnableMode:=ENUM_StageEnableMode.ALWAYS);
+	M2 : DUT_MotionStage := (bPowerSelf:=TRUE, nEnableMode:=ENUM_StageEnableMode.ALWAYS);
+	M3 : DUT_MotionStage := (bPowerSelf:=TRUE, nEnableMode:=ENUM_StageEnableMode.ALWAYS);
+	M4 : DUT_MotionStage := (bPowerSelf:=TRUE, nEnableMode:=ENUM_StageEnableMode.ALWAYS);
+	M5 : DUT_MotionStage := (bPowerSelf:=TRUE, nEnableMode:=ENUM_StageEnableMode.ALWAYS);
+	
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[M1.bHardwareEnable := TRUE;
+fbSDS_Motor_X(stMotionStage:=Main.M1);
+
+M2.bHardwareEnable := TRUE;
+fbSDS_Motor_Y(stMotionStage:=Main.M2);
+
+M3.bHardwareEnable := TRUE;
+fbSDS_Motor_Z(stMotionStage:=Main.M3);
+
+M4.bHardwareEnable := TRUE;
+fbSDS_Motor_rY(stMotionStage:=Main.M4);
+
+M5.bHardwareEnable := TRUE;
+fbSDS_Motor_Shroud(stMotionStage:=Main.M5);
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
