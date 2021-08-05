@@ -1327,11 +1327,6 @@ External Setpoint Generation:
 			<Dynamic AccelerationMaximum="5" DecelerationMaximum="3" Acceleration="2" Deceleration="3"/>
 			<Velo Maximum="30"/>
 			<OtherSettings AllowMotionCmdToSlave="true"/>
-			<ParameterChanged>39</ParameterChanged>
-			<ParameterChanged>257</ParameterChanged>
-			<ParameterChanged>242</ParameterChanged>
-			<ParameterChanged>258</ParameterChanged>
-			<ParameterChanged>241</ParameterChanged>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="29">
 			<EncPara MaxCount="#xffffffff">
