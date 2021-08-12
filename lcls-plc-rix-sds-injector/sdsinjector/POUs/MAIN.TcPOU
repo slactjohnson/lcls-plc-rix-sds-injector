@@ -24,12 +24,20 @@ fbSDS_Motor_X(stMotionStage:=Main.M1);
 
 M2.bHardwareEnable := TRUE;
 fbSDS_Motor_Y(stMotionStage:=Main.M2);
+M2.bLimitBackwardEnable := TRUE;
+M2.bLimitForwardEnable := TRUE;
+
 
 M3.bHardwareEnable := TRUE;
 fbSDS_Motor_Z(stMotionStage:=Main.M3);
+M3.bLimitBackwardEnable := TRUE;
+M3.bLimitForwardEnable := TRUE;
 
 M4.bHardwareEnable := TRUE;
 fbSDS_Motor_rY(stMotionStage:=Main.M4);
+
+M4.bLimitBackwardEnable := TRUE;
+M4.bLimitForwardEnable := TRUE;
 
 M5.bHardwareEnable := TRUE;
 fbSDS_Motor_Shroud(stMotionStage:=Main.M5);
