@@ -1330,9 +1330,10 @@ External Setpoint Generation:
 			<OtherSettings AllowMotionCmdToSlave="true"/>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="29">
-			<EncPara ScaleFactorNumerator="0.0003125" MaxCount="#xffffffff">
-				<Inc RefSoftSyncMask="#x0000ffff"/>
-				<ParameterChanged>8</ParameterChanged>
+			<EncPara ScaleFactorNumerator="0.1758" MaxCount="#x00000eff">
+				<Inc RefSoftSyncMask="#x0000efff"/>
+				<ParameterChanged>21</ParameterChanged>
+				<ParameterChanged>264</ParameterChanged>
 			</EncPara>
 			<Vars VarGrpType="1">
 				<Name>Inputs</Name>
@@ -1377,7 +1378,6 @@ External Setpoint Generation:
 			<DrvPara>
 				<Analog VeloReferenz="40" ScaleFactorActTorque="0.1"/>
 				<TimeComp TaskDelayCycles="1"/>
-				<ParameterChanged>6</ParameterChanged>
 			</DrvPara>
 			<Vars VarGrpType="1">
 				<Name>Inputs</Name>

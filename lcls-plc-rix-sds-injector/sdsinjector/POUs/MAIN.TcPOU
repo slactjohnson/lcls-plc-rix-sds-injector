@@ -21,6 +21,8 @@ END_VAR
     <Implementation>
       <ST><![CDATA[M1.bHardwareEnable := TRUE;
 fbSDS_Motor_X(stMotionStage:=Main.M1);
+M1.bLimitBackwardEnable := TRUE;
+M1.bLimitForwardEnable := TRUE;
 
 M2.bHardwareEnable := TRUE;
 fbSDS_Motor_Y(stMotionStage:=Main.M2);

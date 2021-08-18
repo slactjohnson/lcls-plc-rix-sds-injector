@@ -1463,8 +1463,9 @@ Drive Status 4 (manually linked):
 		</Drive>
 		<Controller Name="Ctrl" CtrType="2">
 			<CtrPara PriorControlFactor="1">
-				<PID PosExtKp="1" DeadBandPosition="0.1"/>
+				<PID PosKp="5" PosExtKp="1" DeadBandPosition="0.1"/>
 				<Observer BandWidth="20"/>
+				<ParameterChanged>262</ParameterChanged>
 			</CtrPara>
 		</Controller>
 		<Vars VarGrpType="1" InsertType="1">
